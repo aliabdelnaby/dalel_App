@@ -8,4 +8,18 @@ abstract class CustomTextStyle {
     fontFamily: 'Pacifico',
     color: AppColors.deebBrown,
   );
+
+  static const poppins500style24 = TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Poppins',
+    color: Colors.black,
+  );
+
+  static const poppins300style16 = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'Poppins',
+    color: Colors.black,
+  );
 }

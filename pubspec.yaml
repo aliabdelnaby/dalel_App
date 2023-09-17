@@ -33,6 +33,7 @@ dependencies:
   flutter:
     sdk: flutter
   go_router: ^10.1.2
+  smooth_page_indicator: ^1.1.0
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -66,7 +67,9 @@ flutter:
     - family: Pacifico
       fonts:
         - asset: assets/fonts/Pacifico-Regular.ttf
-
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
 flutter_assets:
