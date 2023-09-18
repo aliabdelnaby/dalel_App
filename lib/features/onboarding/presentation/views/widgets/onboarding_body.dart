@@ -1,22 +1,27 @@
-import 'package:dalil/core/utils/app_assets.dart';
 import 'package:dalil/core/utils/app_text_style.dart';
 import 'package:dalil/features/onboarding/data/models/onboarding_model.dart';
 import 'package:flutter/material.dart';
 import 'custom_smooth_page_indicator.dart';
 
 class OnBoardingWidgetBody extends StatelessWidget {
-  OnBoardingWidgetBody({super.key});
+  const OnBoardingWidgetBody({
+    super.key,
+    required this.controller,
+    this.onPageChanged,
+  });
 
-  final PageController _controller = PageController();
-
+  final PageController controller;
+  final Function(int)? onPageChanged;
+  
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 600,
       child: PageView.builder(
         physics: const BouncingScrollPhysics(),
-        controller: _controller,
+        controller: controller,
         itemCount: onBoardingData.length,
+        onPageChanged: onPageChanged,
         itemBuilder: (context, index) {
           return Column(
             children: [
@@ -32,10 +37,10 @@ class OnBoardingWidgetBody extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 24),
-              CustomSmoothPageIndicator(controller: _controller),
+              CustomSmoothPageIndicator(controller: controller),
               const SizedBox(height: 32),
               Text(
-                   onBoardingData[index].title,
+                onBoardingData[index].title,
                 style: CustomTextStyle.poppins500style24.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
@@ -44,8 +49,8 @@ class OnBoardingWidgetBody extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
               ),
               const SizedBox(height: 16),
-               Text(
-                 onBoardingData[index].subTitle,
+              Text(
+                onBoardingData[index].subTitle,
                 style: CustomTextStyle.poppins300style16,
                 textAlign: TextAlign.center,
                 maxLines: 2,

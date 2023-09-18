@@ -28,6 +28,6 @@ List<OnBoardingModel> onBoardingData = [
     imagePath: Assets.assetsImagesOnBoarding,
     title: "Using modern AI technology for better user experience",
     subTitle:
-        "AI provide recommendations and helps you to continue the search journy",
+        "AI provide recommendations and helps you to continue the search journey",
   ),
 ];
