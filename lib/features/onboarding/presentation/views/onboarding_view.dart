@@ -1,3 +1,4 @@
+import 'package:dalil/core/database/cache/cache_helper.dart';
 import 'package:dalil/core/functions/navigation.dart';
 import 'package:flutter/material.dart';
 import 'widgets/custom_nav_bar.dart';
@@ -26,6 +27,8 @@ class _OnBoardingViewState extends State<OnBoardingView> {
               const SizedBox(height: 40),
               CustomNavBar(
                 onTap: () {
+                  CacheHelper()
+                      .saveData(key: 'isOnBoardingVisited', value: true);
                   customReplacementNavigate(context, "/signUp");
                 },
               ),
