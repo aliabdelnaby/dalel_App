@@ -10,7 +10,8 @@ class OnBoardingWidgetBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return SizedBox(
+      height: 600,
       child: PageView.builder(
         physics: const BouncingScrollPhysics(),
         controller: _controller,
@@ -18,7 +19,17 @@ class OnBoardingWidgetBody extends StatelessWidget {
         itemBuilder: (context, index) {
           return Column(
             children: [
-              Image.asset(Assets.assetsImagesOnBoarding1),
+              Container(
+                width: 290,
+                height: 343,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      (Assets.assetsImagesOnBoarding1),
+                    ),
+                  ),
+                ),
+              ),
               const SizedBox(height: 24),
               CustomSmoothPageIndicator(controller: _controller),
               const SizedBox(height: 32),
@@ -28,12 +39,16 @@ class OnBoardingWidgetBody extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
                 textAlign: TextAlign.center,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
               ),
               const SizedBox(height: 16),
               const Text(
                 "Using our app's history libraries \n you can find many hostrical periods",
                 style: CustomTextStyle.poppins300style16,
                 textAlign: TextAlign.center,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
               ),
             ],
           );

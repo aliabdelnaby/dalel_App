@@ -35,7 +35,7 @@ void delayedNavigate(context) {
   Future.delayed(
     const Duration(seconds: 2),
     () {
-      customNavigate(
+      customReplacementNavigate(
         context,
         '/onboarding',
       );
