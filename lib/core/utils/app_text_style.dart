@@ -15,11 +15,35 @@ abstract class CustomTextStyle {
     fontFamily: 'Poppins',
     color: Colors.black,
   );
+  static final poppins500style18 = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Poppins',
+    color: AppColors.grey,
+  );
+  static const poppins600style28 = TextStyle(
+    fontSize: 28,
+    fontWeight: FontWeight.w600,
+    fontFamily: 'Poppins',
+    color: Colors.black,
+  );
 
   static const poppins300style16 = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w300,
     fontFamily: 'Poppins',
     color: Colors.black,
+  );
+  static final poppins400style12 = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'Poppins',
+    color: AppColors.deebGrey,
+  );
+  static final saira700style32 = TextStyle(
+    fontSize: 32,
+    fontWeight: FontWeight.w700,
+    fontFamily: 'Saira',
+    color: AppColors.offWhite,
   );
 }

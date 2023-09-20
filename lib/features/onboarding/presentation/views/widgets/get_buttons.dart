@@ -1,4 +1,4 @@
-
+import 'package:dalil/features/onboarding/presentation/views/functions/onboarding.dart';
 import 'package:flutter/material.dart';
 import '../../../../../core/functions/navigation.dart';
 import '../../../../../core/utils/app_strings.dart';
@@ -19,12 +19,14 @@ class GetButtons extends StatelessWidget {
           CustomBtn(
             text: AppStrings.createAccount,
             onPressed: () {
+              onBoardingVisited();
               customReplacementNavigate(context, "/signUp");
             },
           ),
           const SizedBox(height: 16),
           GestureDetector(
             onTap: () {
+              onBoardingVisited();
               customReplacementNavigate(context, "/signIn");
             },
             child: Text(
