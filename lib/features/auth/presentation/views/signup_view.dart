@@ -1,10 +1,10 @@
 import 'package:dalil/core/utils/app_strings.dart';
 import 'package:dalil/core/widgets/custom_button.dart';
-import 'package:dalil/features/auth/presentation/views/widgets/welcome_text_widget.dart';
+import 'package:dalil/features/auth/presentation/widgets/welcome_text_widget.dart';
 import 'package:flutter/material.dart';
-import 'widgets/custom_text_field.dart';
-import 'widgets/have_an_account.dart';
-import 'widgets/terms_and_condition_widget.dart';
+import '../widgets/custom_text_field.dart';
+import '../widgets/have_an_account.dart';
+import '../widgets/terms_and_condition_widget.dart';
 
 class SignUpView extends StatelessWidget {
   const SignUpView({super.key});
