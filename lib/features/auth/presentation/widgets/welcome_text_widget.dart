@@ -1,5 +1,6 @@
-import 'package:dalil/core/utils/app_text_style.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../core/utils/app_text_style.dart';
 
 class WelcomeTextWidget extends StatelessWidget {
   const WelcomeTextWidget({super.key, required this.text});

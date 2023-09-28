@@ -1,6 +1,6 @@
-import 'package:dalil/core/utils/app_strings.dart';
-import 'package:dalil/features/auth/presentation/widgets/custom_sign_up.dart';
-import 'package:dalil/features/auth/presentation/widgets/welcome_text_widget.dart';
+import '../../../../core/utils/app_strings.dart';
+import '../widgets/custom_sign_up.dart';
+import '../widgets/welcome_text_widget.dart';
 import 'package:flutter/material.dart';
 import '../widgets/have_an_account.dart';
 

@@ -1,6 +1,7 @@
-import 'package:dalil/core/utils/app_text_style.dart';
-import 'package:dalil/features/onboarding/data/models/onboarding_model.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../../core/utils/app_text_style.dart';
+import '../../../data/models/onboarding_model.dart';
 import 'custom_smooth_page_indicator.dart';
 
 class OnBoardingWidgetBody extends StatelessWidget {

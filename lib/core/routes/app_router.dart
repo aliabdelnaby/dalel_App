@@ -1,8 +1,8 @@
-import 'package:dalil/core/services/service_locator.dart';
-import 'package:dalil/features/auth/presentation/auth_cubit/cubit/auth_cubit.dart';
-import 'package:dalil/features/auth/presentation/views/signin_view.dart';
-import 'package:dalil/features/onboarding/presentation/views/onboarding_view.dart';
-import 'package:dalil/features/splash/presentation/views/splash_view.dart';
+import '../services/service_locator.dart';
+import '../../features/auth/presentation/auth_cubit/cubit/auth_cubit.dart';
+import '../../features/auth/presentation/views/signin_view.dart';
+import '../../features/onboarding/presentation/views/onboarding_view.dart';
+import '../../features/splash/presentation/views/splash_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import '../../features/auth/presentation/views/signup_view.dart';

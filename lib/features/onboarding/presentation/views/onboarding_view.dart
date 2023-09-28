@@ -1,6 +1,7 @@
-import 'package:dalil/core/functions/navigation.dart';
-import 'package:dalil/features/onboarding/presentation/views/functions/onboarding.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../core/functions/navigation.dart';
+import 'functions/onboarding.dart';
 import 'widgets/custom_nav_bar.dart';
 import 'widgets/get_buttons.dart';
 import 'widgets/onboarding_body.dart';

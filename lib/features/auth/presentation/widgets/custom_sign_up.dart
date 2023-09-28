@@ -1,9 +1,9 @@
-import 'package:dalil/core/utils/app_colors.dart';
-import 'package:dalil/core/utils/app_strings.dart';
-import 'package:dalil/core/widgets/custom_button.dart';
-import 'package:dalil/features/auth/presentation/auth_cubit/cubit/auth_cubit.dart';
-import 'package:dalil/features/auth/presentation/auth_cubit/cubit/auth_state.dart';
-import 'package:dalil/features/auth/presentation/widgets/terms_and_condition_widget.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_strings.dart';
+import '../../../../core/widgets/custom_button.dart';
+import '../auth_cubit/cubit/auth_cubit.dart';
+import '../auth_cubit/cubit/auth_state.dart';
+import 'terms_and_condition_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'custom_text_field.dart';

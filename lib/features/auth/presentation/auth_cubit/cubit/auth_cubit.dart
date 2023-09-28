@@ -1,4 +1,4 @@
-import 'package:dalil/features/auth/presentation/auth_cubit/cubit/auth_state.dart';
+import 'auth_state.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

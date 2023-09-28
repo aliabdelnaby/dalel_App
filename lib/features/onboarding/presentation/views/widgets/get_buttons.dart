@@ -1,10 +1,11 @@
-import 'package:dalil/features/onboarding/presentation/views/functions/onboarding.dart';
 import 'package:flutter/material.dart';
+
 import '../../../../../core/functions/navigation.dart';
 import '../../../../../core/utils/app_strings.dart';
 import '../../../../../core/utils/app_text_style.dart';
 import '../../../../../core/widgets/custom_button.dart';
 import '../../../data/models/onboarding_model.dart';
+import '../functions/onboarding.dart';
 
 class GetButtons extends StatelessWidget {
   const GetButtons(

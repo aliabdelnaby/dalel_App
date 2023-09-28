@@ -1,7 +1,7 @@
-import 'package:dalil/core/database/cache/cache_helper.dart';
-import 'package:dalil/core/services/service_locator.dart';
-import 'package:dalil/core/utils/app_strings.dart';
-import 'package:dalil/core/utils/app_text_style.dart';
+import '../../../../core/database/cache/cache_helper.dart';
+import '../../../../core/services/service_locator.dart';
+import '../../../../core/utils/app_strings.dart';
+import '../../../../core/utils/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/functions/navigation.dart';
