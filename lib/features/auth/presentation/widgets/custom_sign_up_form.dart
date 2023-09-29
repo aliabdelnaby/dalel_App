@@ -1,5 +1,5 @@
-import 'package:dalil/core/functions/custom_toast.dart';
-import 'package:dalil/core/functions/navigation.dart';
+import '../../../../core/functions/custom_toast.dart';
+import '../../../../core/functions/navigation.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_strings.dart';
 import '../../../../core/widgets/custom_button.dart';

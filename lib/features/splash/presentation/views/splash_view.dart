@@ -1,10 +1,10 @@
+import 'package:flutter/material.dart';
+
 import '../../../../core/database/cache/cache_helper.dart';
+import '../../../../core/functions/navigation.dart';
 import '../../../../core/services/service_locator.dart';
 import '../../../../core/utils/app_strings.dart';
 import '../../../../core/utils/app_text_style.dart';
-import 'package:flutter/material.dart';
-
-import '../../../../core/functions/navigation.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
