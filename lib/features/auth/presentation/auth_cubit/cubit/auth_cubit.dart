@@ -31,6 +31,7 @@ class AuthCubit extends Cubit<AuthState> {
             errMessage: 'The account already exists for that email.'));
       }
     } catch (e) {
+      print(e.toString());
       emit(SignUpFailureState(errMessage: e.toString()));
     }
   }

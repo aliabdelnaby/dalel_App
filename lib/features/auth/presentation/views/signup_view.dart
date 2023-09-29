@@ -1,5 +1,7 @@
+import 'package:dalil/core/functions/navigation.dart';
+
 import '../../../../core/utils/app_strings.dart';
-import '../widgets/custom_sign_up.dart';
+import '../widgets/custom_sign_up_form.dart';
 import '../widgets/welcome_text_widget.dart';
 import 'package:flutter/material.dart';
 import '../widgets/have_an_account.dart';
@@ -9,24 +11,27 @@ class SignUpView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16),
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         child: CustomScrollView(
           slivers: [
-            SliverToBoxAdapter(child: SizedBox(height: 152)),
-            SliverToBoxAdapter(
+            const SliverToBoxAdapter(child: SizedBox(height: 152)),
+            const SliverToBoxAdapter(
                 child: WelcomeTextWidget(text: AppStrings.welcome)),
-            SliverToBoxAdapter(child: SizedBox(height: 16)),
-            SliverToBoxAdapter(child: CustomSignUp()),
-            SliverToBoxAdapter(child: SizedBox(height: 16)),
+            const SliverToBoxAdapter(child: SizedBox(height: 16)),
+            const SliverToBoxAdapter(child: CustomSignUp()),
+            const SliverToBoxAdapter(child: SizedBox(height: 16)),
             SliverToBoxAdapter(
               child: HaveAnAccountWidget(
+                onTap: () {
+                  customNavigate(context, '/signin');
+                },
                 text1: AppStrings.alreadyHaveAnAccount,
                 text2: AppStrings.signIn,
               ),
             ),
-            SliverToBoxAdapter(child: SizedBox(height: 20)),
+            const SliverToBoxAdapter(child: SizedBox(height: 20)),
           ],
         ),
       ),
