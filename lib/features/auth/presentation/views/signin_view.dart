@@ -160,11 +160,24 @@
 
 import 'package:flutter/material.dart';
 
+import '../../../../core/functions/navigation.dart';
+
 class SignInView extends StatelessWidget {
   const SignInView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        actions: [
+          IconButton(
+            onPressed: () {
+              customNavigate(context, "/signup");
+            },
+            icon: const Icon(Icons.logout),
+          ),
+        ],
+      ),
+    );
   }
 }

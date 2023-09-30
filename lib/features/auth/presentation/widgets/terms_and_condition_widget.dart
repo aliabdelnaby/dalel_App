@@ -1,7 +1,7 @@
-import '../../../../core/utils/app_strings.dart';
-import '../../../../core/utils/app_text_style.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../core/utils/app_strings.dart';
+import '../../../../core/utils/app_text_style.dart';
 import 'custom_check_box.dart';
 
 class TermsAndConditionWidget extends StatelessWidget {

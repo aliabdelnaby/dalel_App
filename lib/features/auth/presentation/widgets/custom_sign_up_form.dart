@@ -1,3 +1,6 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../../../core/functions/custom_toast.dart';
 import '../../../../core/functions/navigation.dart';
 import '../../../../core/utils/app_colors.dart';
@@ -5,10 +8,8 @@ import '../../../../core/utils/app_strings.dart';
 import '../../../../core/widgets/custom_button.dart';
 import '../auth_cubit/cubit/auth_cubit.dart';
 import '../auth_cubit/cubit/auth_state.dart';
-import 'terms_and_condition_widget.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'custom_text_field.dart';
+import 'terms_and_condition_widget.dart';
 
 class CustomSignUp extends StatelessWidget {
   const CustomSignUp({super.key});
@@ -19,7 +20,7 @@ class CustomSignUp extends StatelessWidget {
       listener: (context, state) {
         if (state is SignUpSuccessState) {
           showToast("Account Created Successfully");
-          customReplacementNavigate(context, '/signin');
+          customReplacementNavigate(context, '/home');
         } else if (state is SignUpFailureState) {
           showToast(state.errMessage);
         }
