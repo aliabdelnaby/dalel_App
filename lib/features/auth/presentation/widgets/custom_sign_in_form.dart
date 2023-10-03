@@ -1,48 +1,35 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../../../../core/functions/custom_toast.dart';
 import '../../../../core/functions/navigation.dart';
+import 'forgot_password_text_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_strings.dart';
 import '../../../../core/widgets/custom_button.dart';
 import '../auth_cubit/cubit/auth_cubit.dart';
 import '../auth_cubit/cubit/auth_state.dart';
 import 'custom_text_field.dart';
-import 'terms_and_condition_widget.dart';
 
-class CustomSignUpForm extends StatelessWidget {
-  const CustomSignUpForm({super.key});
+class CustomSignInForm extends StatelessWidget {
+  const CustomSignInForm({super.key});
 
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<AuthCubit, AuthState>(
       listener: (context, state) {
-        if (state is SignUpSuccessState) {
-          showToast("Account Created Successfully");
+        if (state is SignInSuccessState) {
+          showToast("Welcome Back!");
           customReplacementNavigate(context, '/home');
-        } else if (state is SignUpFailureState) {
+        } else if (state is SignInFailureState) {
           showToast(state.errMessage);
         }
       },
       builder: (context, state) {
         AuthCubit authCubit = BlocProvider.of<AuthCubit>(context);
         return Form(
-          key: authCubit.signupformkey,
+          key: authCubit.signinformkey,
           child: Column(
             children: [
-              CustomTextFormField(
-                labelText: AppStrings.fristName,
-                onChanged: (firstname) {
-                  authCubit.firstName = firstname;
-                },
-              ),
-              CustomTextFormField(
-                labelText: AppStrings.lastName,
-                onChanged: (lastName) {
-                  authCubit.lastName = lastName;
-                },
-              ),
               CustomTextFormField(
                 labelText: AppStrings.emailAddress,
                 onChanged: (emailAddress) {
@@ -66,25 +53,20 @@ class CustomSignUpForm extends StatelessWidget {
                   authCubit.password = password;
                 },
               ),
-              const TermsAndConditionWidget(),
-              const SizedBox(height: 88),
-              state is SignUpLoadingState
+              const SizedBox(height: 16),
+              const ForgotPasswordTextWidget(),
+              const SizedBox(height: 102),
+              state is SignInLoadingState
                   ? CircularProgressIndicator(
                       color: AppColors.primaryColor,
                     )
                   : CustomBtn(
-                      color: authCubit.termsAndConditionCheckBoxValue == false
-                          ? AppColors.grey
-                          : null,
                       onPressed: () {
-                        if (authCubit.termsAndConditionCheckBoxValue == true) {
-                          if (authCubit.signupformkey.currentState!
-                              .validate()) {
-                            authCubit.signUpWithEmailAndPassword();
-                          }
+                        if (authCubit.signinformkey.currentState!.validate()) {
+                          authCubit.signInWithEmailAndPassword();
                         }
                       },
-                      text: AppStrings.signUp,
+                      text: AppStrings.signIn,
                     ),
             ],
           ),

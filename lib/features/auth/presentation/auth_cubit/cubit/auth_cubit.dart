@@ -14,6 +14,7 @@ class AuthCubit extends Cubit<AuthState> {
   bool? termsAndConditionCheckBoxValue = false;
   bool? obscurePasswordTextValue = true;
   GlobalKey<FormState> signupformkey = GlobalKey();
+  GlobalKey<FormState> signinformkey = GlobalKey();
 
   signUpWithEmailAndPassword() async {
     try {
@@ -32,7 +33,6 @@ class AuthCubit extends Cubit<AuthState> {
             errMessage: 'The account already exists for that email.'));
       }
     } catch (e) {
-      print(e.toString());
       emit(SignUpFailureState(errMessage: e.toString()));
     }
   }
@@ -49,5 +49,26 @@ class AuthCubit extends Cubit<AuthState> {
       obscurePasswordTextValue = true;
     }
     emit(ObscurePasswordTextUpdateState());
+  }
+
+  signInWithEmailAndPassword() async {
+    try {
+      emit(SignInLoadingState());
+
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: emailAddress!,
+        password: password!,
+      );
+      emit(SignInSuccessState());
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'user-not-found') {
+        emit(SignInFailureState(errMessage: "No user found for that email."));
+      } else if (e.code == 'wrong-password') {
+        emit(SignUpFailureState(
+            errMessage: "Wrong password provided for that user."));
+      }
+    } catch (e) {
+      emit(SignInFailureState(errMessage: e.toString()));
+    }
   }
 }

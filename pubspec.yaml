@@ -79,7 +79,7 @@ flutter:
         - asset: assets/fonts/Poppins-Regular.ttf
     - family: Saira
       fonts:
-        - asset: assets/fonts/Saira_Expanded-Black.ttf
+        - asset: assets/fonts/Saira_Condensed-Regular.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
 flutter_assets:
