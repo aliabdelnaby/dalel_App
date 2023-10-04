@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'auth_state.dart';
 
 class AuthCubit extends Cubit<AuthState> {
@@ -66,6 +65,8 @@ class AuthCubit extends Cubit<AuthState> {
       } else if (e.code == 'wrong-password') {
         emit(SignUpFailureState(
             errMessage: "Wrong password provided for that user."));
+      }else {
+        emit(SignInFailureState(errMessage: 'Check your Email and password!'));
       }
     } catch (e) {
       emit(SignInFailureState(errMessage: e.toString()));
