@@ -20,9 +20,8 @@ class WelcomePanner extends StatelessWidget {
         children: [
           const Text(
             AppStrings.appName,
-            style: CustomTextStyle.saira700style32,
+            style: CustomTextStyle.saira700style42,
           ),
-          const SizedBox(height: 18),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.end,
