@@ -39,6 +39,7 @@ abstract class AppStrings {
       privacyPolicy = "Privacy Policy",
       logOut = "Log Out",
       //!Bazar
+      historicalPeriods = "Historical periods",
       bazar = "Bazar",
       historyBooks = "History Books",
       historicalSouvenirs = "Historical Souvenirs",
