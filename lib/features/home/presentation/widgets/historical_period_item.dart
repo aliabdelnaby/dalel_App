@@ -1,11 +1,12 @@
-
-import 'package:dalil/core/utils/app_assets.dart';
 import 'package:dalil/core/utils/app_colors.dart';
 import 'package:dalil/core/utils/app_text_style.dart';
+import 'package:dalil/features/home/data/models/historical_periods_models.dart';
 import 'package:flutter/material.dart';
 
 class HistoricalPeriodsItem extends StatelessWidget {
-  const HistoricalPeriodsItem({super.key});
+  const HistoricalPeriodsItem({super.key, required this.model});
+
+  final HistoricalPeriodsModel model;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +32,7 @@ class HistoricalPeriodsItem extends StatelessWidget {
             height: 48,
             width: 62,
             child: Text(
-              "Ancient Egypt",
+              model.name,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
               textAlign: TextAlign.center,
@@ -44,9 +45,10 @@ class HistoricalPeriodsItem extends StatelessWidget {
           Container(
             height: 64,
             width: 47,
-            decoration: const BoxDecoration(
-              image:
-                  DecorationImage(image: AssetImage(Assets.assetsImagesFrame)),
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: NetworkImage(model.image),
+              ),
             ),
           ),
           const SizedBox(width: 16),
