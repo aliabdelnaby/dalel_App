@@ -1,7 +1,9 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dalil/core/utils/app_colors.dart';
 import 'package:dalil/core/utils/app_text_style.dart';
 import 'package:dalil/features/home/data/models/historical_periods_models.dart';
 import 'package:flutter/material.dart';
+import 'package:shimmer/shimmer.dart';
 
 class HistoricalPeriodsItem extends StatelessWidget {
   const HistoricalPeriodsItem({super.key, required this.model});
@@ -45,10 +47,18 @@ class HistoricalPeriodsItem extends StatelessWidget {
           Container(
             height: 64,
             width: 47,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: NetworkImage(model.image),
+            child: CachedNetworkImage(
+              imageUrl: model.image,
+              placeholder: (context, url) => Shimmer.fromColors(
+                baseColor: AppColors.grey,
+                highlightColor: Colors.white,
+                child: Container(
+                  color: AppColors.grey,
+                  height: 47,
+                  width: 64,
+                ),
               ),
+              errorWidget: (context, url, error) => const Icon(Icons.error),
             ),
           ),
           const SizedBox(width: 16),
