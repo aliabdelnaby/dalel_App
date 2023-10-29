@@ -32,7 +32,7 @@ class HistoricalPeriodsItem extends StatelessWidget {
           const SizedBox(width: 15),
           SizedBox(
             height: 48,
-            width: 62,
+            width: 65,
             child: Text(
               model.name,
               maxLines: 2,
@@ -44,7 +44,7 @@ class HistoricalPeriodsItem extends StatelessWidget {
               ),
             ),
           ),
-          Container(
+          SizedBox(
             height: 64,
             width: 47,
             child: CachedNetworkImage(
@@ -61,7 +61,7 @@ class HistoricalPeriodsItem extends StatelessWidget {
               errorWidget: (context, url, error) => const Icon(Icons.error),
             ),
           ),
-          const SizedBox(width: 16),
+          const SizedBox(width: 15),
         ],
       ),
     );
