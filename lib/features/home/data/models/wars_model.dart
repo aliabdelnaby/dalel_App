@@ -1,5 +1,5 @@
-import 'package:dalil/core/models/data_model.dart';
-import 'package:dalil/core/utils/app_strings.dart';
+import '../../../../core/models/data_model.dart';
+import '../../../../core/utils/app_strings.dart';
 
 class WarsModel extends DataModel {
   WarsModel({

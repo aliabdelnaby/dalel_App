@@ -1,6 +1,6 @@
-import 'package:dalil/core/utils/app_strings.dart';
-import 'package:dalil/core/widgets/custom_header_text.dart';
-import 'package:dalil/features/home/presentation/widgets/historical_periods.dart';
+import '../../../../../core/utils/app_strings.dart';
+import '../../../../../core/widgets/custom_header_text.dart';
+import '../historical_periods.dart';
 import 'package:flutter/material.dart';
 
 class HistoricalPeriodsSection extends StatelessWidget {

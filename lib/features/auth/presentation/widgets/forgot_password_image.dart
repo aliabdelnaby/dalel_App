@@ -1,4 +1,4 @@
-import 'package:dalil/core/utils/app_assets.dart';
+import '../../../../core/utils/app_assets.dart';
 import 'package:flutter/material.dart';
 
 class ForgotPasswrodImage extends StatelessWidget {

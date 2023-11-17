@@ -1,4 +1,4 @@
-import 'package:dalil/features/home/presentation/widgets/home_appbar_widget.dart';
+import '../home_appbar_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomeAppBarSection extends StatelessWidget {

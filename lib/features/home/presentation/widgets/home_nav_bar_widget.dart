@@ -1,10 +1,10 @@
-import 'package:dalil/core/utils/app_assets.dart';
-import 'package:dalil/core/utils/app_colors.dart';
-import 'package:dalil/features/cart/presentaion/views/cart_view.dart';
-import 'package:dalil/features/home/presentation/cubit/home_cubit.dart';
-import 'package:dalil/features/home/presentation/views/home_view.dart';
-import 'package:dalil/features/profile/presentation/views/profile_view.dart';
-import 'package:dalil/features/search/presentaion/views/search_view.dart';
+import '../../../../core/utils/app_assets.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../cart/presentaion/views/cart_view.dart';
+import '../cubit/home_cubit.dart';
+import '../views/home_view.dart';
+import '../../../profile/presentation/views/profile_view.dart';
+import '../../../search/presentaion/views/search_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';

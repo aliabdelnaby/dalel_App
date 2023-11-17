@@ -1,7 +1,7 @@
 
-import 'package:dalil/core/utils/app_assets.dart';
-import 'package:dalil/core/utils/app_strings.dart';
-import 'package:dalil/core/utils/app_text_style.dart';
+import '../../../../core/utils/app_assets.dart';
+import '../../../../core/utils/app_strings.dart';
+import '../../../../core/utils/app_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

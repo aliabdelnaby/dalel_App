@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:dalil/core/utils/app_strings.dart';
-import 'package:dalil/features/home/data/models/historical_periods_models.dart';
-import 'package:dalil/features/home/data/models/wars_model.dart';
-import 'package:dalil/features/home/presentation/cubit/home_state.dart';
+import '../../../../core/utils/app_strings.dart';
+import '../../data/models/historical_periods_models.dart';
+import '../../data/models/wars_model.dart';
+import 'home_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomeCubit extends Cubit<HomeState> {

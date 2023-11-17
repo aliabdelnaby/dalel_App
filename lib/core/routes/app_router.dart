@@ -1,4 +1,4 @@
-import 'package:dalil/features/home/presentation/widgets/home_nav_bar_widget.dart';
+import '../../features/home/presentation/widgets/home_nav_bar_widget.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import '../../features/auth/presentation/auth_cubit/cubit/auth_cubit.dart';

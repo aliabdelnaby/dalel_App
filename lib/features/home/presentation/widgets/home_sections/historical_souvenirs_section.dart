@@ -1,6 +1,6 @@
-import 'package:dalil/core/utils/app_strings.dart';
-import 'package:dalil/core/widgets/custom_header_text.dart';
-import 'package:dalil/features/home/presentation/widgets/custom_category_list_view.dart';
+import '../../../../../core/utils/app_strings.dart';
+import '../../../../../core/widgets/custom_header_text.dart';
+import '../custom_category_list_view.dart';
 import 'package:flutter/material.dart';
 
 class HistoricalSouvenirsSection extends StatelessWidget {

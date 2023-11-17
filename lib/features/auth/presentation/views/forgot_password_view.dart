@@ -1,8 +1,8 @@
-import 'package:dalil/core/utils/app_strings.dart';
-import 'package:dalil/features/auth/presentation/widgets/custom_forgot_password_form.dart';
-import 'package:dalil/features/auth/presentation/widgets/forgot_password_image.dart';
-import 'package:dalil/features/auth/presentation/widgets/forgot_password_sub_title.dart';
-import 'package:dalil/features/auth/presentation/widgets/welcome_text_widget.dart';
+import '../../../../core/utils/app_strings.dart';
+import '../widgets/custom_forgot_password_form.dart';
+import '../widgets/forgot_password_image.dart';
+import '../widgets/forgot_password_sub_title.dart';
+import '../widgets/welcome_text_widget.dart';
 import 'package:flutter/material.dart';
 
 class ForgotPasswordView extends StatelessWidget {

@@ -1,5 +1,6 @@
-import 'package:dalil/features/home/presentation/widgets/custom_category_list_view_item.dart';
 import 'package:flutter/material.dart';
+
+import 'custom_category_list_view_item.dart';
 
 class CustomCategoryListView extends StatelessWidget {
   const CustomCategoryListView({super.key});

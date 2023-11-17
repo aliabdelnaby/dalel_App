@@ -1,6 +1,6 @@
-import 'package:dalil/core/models/data_model.dart';
-import 'package:dalil/core/utils/app_strings.dart';
-import 'package:dalil/features/home/data/models/wars_model.dart';
+import '../../../../core/models/data_model.dart';
+import '../../../../core/utils/app_strings.dart';
+import 'wars_model.dart';
 
 class HistoricalPeriodsModel extends DataModel {
   final List<WarsModel> wars;
