@@ -1,3 +1,6 @@
+import 'package:dalil/features/home/data/models/historical_periods_models.dart';
+import 'package:dalil/features/home/presentation/views/historical_periods_details_view.dart';
+
 import '../../features/home/presentation/widgets/home_nav_bar_widget.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -41,6 +44,12 @@ final GoRouter router = GoRouter(
       builder: (context, state) => BlocProvider(
         create: (context) => AuthCubit(),
         child: const ForgotPasswordView(),
+      ),
+    ),
+    GoRoute(
+      path: "/historicalPeriodsDetailsView",
+      builder: (context, state) => HistoricalPeriodsDetailsView(
+        model: state.extra as HistoricalPeriodsModel,
       ),
     ),
   ],

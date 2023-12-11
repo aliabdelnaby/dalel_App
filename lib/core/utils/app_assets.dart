@@ -1,6 +1,18 @@
 class Assets {
   Assets._();
   
+  /// Assets for assetsImagesDetails1
+  /// assets/images/details1.svg
+  static const String assetsImagesDetails1 = "assets/images/details1.svg";
+
+  /// Assets for assetsImagesDetails2
+  /// assets/images/details2.svg
+  static const String assetsImagesDetails2 = "assets/images/details2.svg";
+
+  /// Assets for assetsImagesDetails3
+  /// assets/images/details3.svg
+  static const String assetsImagesDetails3 = "assets/images/details3.svg";
+
   /// Assets for assetsImagesForgotPassword
   /// assets/images/forgotPassword.png
   static const String assetsImagesForgotPassword = "assets/images/forgotPassword.png";
